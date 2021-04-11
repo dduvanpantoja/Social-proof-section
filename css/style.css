@@ -11,6 +11,7 @@ html::before {
   position: absolute;
 }
 
+/* MOVIL */
 body {
   font-family: spartan, sans-serif;
 }
@@ -97,4 +98,59 @@ body {
   color: var(--blanco);
   font-size: 12px;
   line-height: 19px;
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 768px) {
+  html::before {
+    content: url(../asset/icons/bg-pattern-top-desktop.svg);
+  }
+}
+/*
+@media screen and (min-width: 768px) {
+  html::after {
+    content: url(../asset/icons/bg-pattern-bottom-desktop.svg);
+  }
+}*/
+
+@media screen and (min-width: 668px) {
+  body {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    justify-items: end;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 800px);
+  }
+
+  .header {
+    text-align: left;
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+
+  .testimonials {
+    display: flex;
+    align-items: start;
+    grid-column: 1 / 4;
+    grid-row: 2;
+  }
+  
+  .rates {
+    margin-bottom: 0;
+    margin-top: 100px;
+  }
+
+  .rated {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .rated-star {
+    margin-right: 30px;
+  }
 }
